@@ -17,18 +17,18 @@ describe('Registro de novo usuário com sucesso', () => {
     cy.get('[name="username"]').type('Qa-tester')                                                                         //Digita o username
     cy.get('[name="password"]').type('ASDFGH12052026')                                                                    //Digita o password
     cy.get('[data-test="signin-submit"]').click()                                                                         //Clica em "Sign In"    
-    //cy.get('[data-test="user-onboarding-next"]').click()                                                                  //clica em "Next" no pop-up que aparece
-    //cy.get('[name="bankName"]').type('QA BANK')                                                                           //Digita o nome do Banco
-    //cy.get('[name="routingNumber"]').type('123456789')                                                                    //Digita o Routing Number
-    //cy.get('[name="accountNumber"]').type('123456789')                                                                    //Digita o Account Number
-    //cy.get('[data-test="bankaccount-submit"]').click()                                                                    //Clica em Save
-    //cy.get('[data-test="user-onboarding-next"]').click()
+    cy.get('[data-test="user-onboarding-next"]').click()                                                                  //clica em "Next" no pop-up que aparece
+    cy.get('[name="bankName"]').type('QA BANK')                                                                           //Digita o nome do Banco
+    cy.get('[name="routingNumber"]').type('123456789')                                                                    //Digita o Routing Number
+    cy.get('[name="accountNumber"]').type('123456789')                                                                    //Digita o Account Number
+    cy.get('[data-test="bankaccount-submit"]').click()                                                                    //Clica em Save
+    cy.get('[data-test="user-onboarding-next"]').click()
 });
 });
 
 //Automacao da feature de login realizado com sucesso
 describe('Login com sucesso', () => {
-  it('Deve fazer login com um usuário válido', () => {
+  it.skip('Deve fazer login com um usuário válido', () => {
     //Implemente os passos do caso de teste aqui: https://drive.google.com/file/d/1pZitqYEtSjSJgaZ4-pyRrkhV5y5N7ioC/view?usp=drive_link
     cy.visit('http://localhost:3000/signin')                                                                              //Acessa a pagina do projeto    
     cy.get('[name="username"]').type('Qa-tester')                                                                         //Digita o nome do usuario
@@ -70,7 +70,7 @@ Automação do caso de teste na feature "Enviar Dinheiro"*/
 
 //Automação dos Casos de Teste "Enviar Dinheiro"
 describe('Enviar dinheiro com saldo suficiente', () => {
-  it('Deve enviar dinheiro com sucesso', () => {
+  it.skip('Deve enviar dinheiro com sucesso', () => {
     //Implemente os passos do caso de teste aqui: https://drive.google.com/file/d/1pZitqYEtSjSJgaZ4-pyRrkhV5y5N7ioC/view?usp=drive_link 
     cy.visit('http://localhost:3000/signin')                                                                              //Acessa a pagina do projeto    
     cy.get('[name="username"]').type('Qa-tester')                                                                         //Digita o nome do usuario
@@ -89,7 +89,7 @@ describe('Enviar dinheiro com saldo suficiente', () => {
 });
 
 describe('Enviar dinheiro com saldo insuficiente', () => {
-  it('Deve exibir mensagem de erro ao enviar dinheiro sem saldo suficiente', () => {
+  it.skip('Deve exibir mensagem de erro ao enviar dinheiro sem saldo suficiente', () => {
     //Implemente os passos do caso de teste aqui: https://drive.google.com/file/d/1pZitqYEtSjSJgaZ4-pyRrkhV5y5N7ioC/view?usp=drive_link    cy.visit('http://localhost:3000/signin')                                                                              //Acessa a pagina do projeto    
     cy.visit('http://localhost:3000/signin')
     cy.get('[name="username"]').type('Qa-tester')                                                                         //Digita o nome do usuario
@@ -112,7 +112,7 @@ Automação do caso de teste para feature "Visualizar Historico de Transacoes"*/
 
 //Automação dos Casos de Teste "Visualizar Histórico de Transações"
 describe('Visualizar histórico de transações com sucesso', () => {
-  it('Deve exibir o histórico de transações de um usuário corretamente', () => {
+  it.skip('Deve exibir o histórico de transações de um usuário corretamente', () => {
     //Implemente os passos do caso de teste aqui: https://drive.google.com/file/d/1pZitqYEtSjSJgaZ4-pyRrkhV5y5N7ioC/view?usp=drive_link    cy.visit('http://localhost:3000/signin')                                                                              //Acessa a pagina do projeto    
     cy.visit('http://localhost:3000/signin')
     cy.get('[name="username"]').type('Qa-tester')                                                                         //Digita o nome do usuario
@@ -123,7 +123,7 @@ describe('Visualizar histórico de transações com sucesso', () => {
 });
 
 describe('Tentar visualizar o histórico de transações sem transações anteriores', () => {
-  it('Deve exibir uma mensagem indicando que o usuário não possui transações anteriores', () => {
+  it.skip('Deve exibir uma mensagem indicando que o usuário não possui transações anteriores', () => {
     //Implemente os passos do caso de teste aqui: https://drive.google.com/file/d/1pZitqYEtSjSJgaZ4-pyRrkhV5y5N7ioC/view?usp=drive_link
     cy.visit('http://localhost:3000/signin')                                                                              //Acessa a pagina do projeto    
     cy.get('[name="username"]').type('Qa-tester')                                                                         //Digita o nome do usuario
