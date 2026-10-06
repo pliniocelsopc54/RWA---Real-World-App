@@ -5,9 +5,10 @@ Automação do Caso de Teste: Login com sucesso.*/
 OBS: Esse Registro de novo usuário com sucesso deverá ser executado
 apenas na primeira vez, caso contrário, dará erro na automação*/
 
+//Exerciocio 1: Implementei os casos de teste em uma planilha compartilhada nesse link: https://docs.google.com/spreadsheets/d/10Yf2ffHau3WyrDrc-VAHqrEwcVj2taOhHP-rMWj6bT4/edit?usp=sharing
+
 describe('Registro de novo usuário com sucesso', () => {
   it('Deve registrar um novo usuário com informações válidas', () => {
-    //Implementei os casos de teste em uma planilha compartilhada nesse link: https://docs.google.com/spreadsheets/d/10Yf2ffHau3WyrDrc-VAHqrEwcVj2taOhHP-rMWj6bT4/edit?usp=sharing
     cy.visit('http://localhost:3000/signin')                                                                              //Acessa a pagina de cadastro de usuario
     cy.get('[data-test="signup"]').click()                                                                                //Clica em: Don't have an account? Sign Up
     cy.get('[name="firstName"]').type('Quality')                                                                          //Digita o primeiro nome
@@ -32,7 +33,6 @@ describe('Registro de novo usuário com sucesso', () => {
 //Automacao da feature de login realizado com sucesso
 describe('Login com sucesso', () => {
   it('Deve fazer login com um usuário válido', () => {
-    //Implementei os casos de teste em uma planilha compartilhada nesse link: https://docs.google.com/spreadsheets/d/10Yf2ffHau3WyrDrc-VAHqrEwcVj2taOhHP-rMWj6bT4/edit?usp=sharing
     cy.visit('http://localhost:3000/signin')                                                                              //Acessa a pagina do projeto    
     cy.get('[name="username"]').type('Qa-tester')                                                                         //Digita o nome do usuario
     cy.get('[name="password"]').type('ASDFGH12052026')                                                                    //Digita a senha
@@ -44,7 +44,6 @@ describe('Login com sucesso', () => {
 //Automação do Caso de Teste: Tentar fazer login com credenciais inválidas.
 describe('Tentar fazer login com credenciais inválidas', () => {
   it('Deve exibir uma mensagem de erro ao fazer login com credenciais inválidas', () => {
-    //Implementei os casos de teste em uma planilha compartilhada nesse link: https://docs.google.com/spreadsheets/d/10Yf2ffHau3WyrDrc-VAHqrEwcVj2taOhHP-rMWj6bT4/edit?usp=sharing
     cy.visit('http://localhost:3000/signin')                                                                              //Acessa a pagina do projeto    
     cy.get('[name="username"]').type('Qa-tester')                                                                         //Digita o nome do usuario
     cy.get('[name="password"]').type('123456')                                                                            //Digita a senha
@@ -56,7 +55,6 @@ describe('Tentar fazer login com credenciais inválidas', () => {
 //Automação do Caso de Teste: Tentar registrar um novo usuário com informações incompletas.
 describe('Tentar registrar um novo usuário com informações incompletas', () => {
   it('Deve exibir mensagens de erro ao tentar registrar um novo usuário sem preencher todas as informações obrigatórias', () => {
-    //Implementei os casos de teste em uma planilha compartilhada nesse link: https://docs.google.com/spreadsheets/d/10Yf2ffHau3WyrDrc-VAHqrEwcVj2taOhHP-rMWj6bT4/edit?usp=sharing
     cy.visit('http://localhost:3000/signin')                                                                              //Acessa a pagina de cadastro de usuario
     cy.get('[data-test="signup"]').click()                                                                                //Clica em: Don't have an account? Sign Up
     cy.get('[name="firstName"]').type('Quality')                                                                          //Digita o primeiro nome
@@ -68,13 +66,12 @@ describe('Tentar registrar um novo usuário com informações incompletas', () =
   });
 });
 
-/*Exercicio 2:
-Automação do caso de teste na feature "Enviar Dinheiro"*/
-
+/*Exercicio 2: Automação do caso de teste na feature "Enviar Dinheiro"*/
 //Automação dos Casos de Teste "Enviar Dinheiro"
+//Implementei os casos de teste em uma planilha compartilhada nesse link: https://docs.google.com/spreadsheets/d/10Yf2ffHau3WyrDrc-VAHqrEwcVj2taOhHP-rMWj6bT4/edit?usp=sharing
+
 describe('Enviar dinheiro com saldo suficiente', () => {
   it('Deve enviar dinheiro com sucesso', () => {
-    //Implementei os casos de teste em uma planilha compartilhada nesse link: https://docs.google.com/spreadsheets/d/10Yf2ffHau3WyrDrc-VAHqrEwcVj2taOhHP-rMWj6bT4/edit?usp=sharing
     cy.visit('http://localhost:3000/signin')                                                                              //Acessa a pagina do projeto    
     cy.get('[name="username"]').type('Qa-tester')                                                                         //Digita o nome do usuario
     cy.get('[name="password"]').type('ASDFGH12052026')                                                                    //Digita a senha
@@ -93,7 +90,6 @@ describe('Enviar dinheiro com saldo suficiente', () => {
 
 describe('Enviar dinheiro com saldo insuficiente', () => {
   it('Deve exibir mensagem de erro ao enviar dinheiro sem saldo suficiente', () => {
-    //Implementei os casos de teste em uma planilha compartilhada nesse link: https://docs.google.com/spreadsheets/d/10Yf2ffHau3WyrDrc-VAHqrEwcVj2taOhHP-rMWj6bT4/edit?usp=sharing
     cy.visit('http://localhost:3000/signin')
     cy.get('[name="username"]').type('Qa-tester')                                                                         //Digita o nome do usuario
     cy.get('[name="password"]').type('ASDFGH12052026')                                                                    //Digita a senha
@@ -111,12 +107,12 @@ describe('Enviar dinheiro com saldo insuficiente', () => {
 });
 
 /*Exercicio 3:
-Automação do caso de teste para feature "Visualizar Historico de Transacoes"*/
+Automação do caso de teste para feature "Visualizar Historico de Transacoes"
+//Automação dos Casos de Teste "Visualizar Histórico de Transações"*/
 
-//Automação dos Casos de Teste "Visualizar Histórico de Transações"
+//Implementei os casos de teste em uma planilha compartilhada nesse link: https://docs.google.com/spreadsheets/d/10Yf2ffHau3WyrDrc-VAHqrEwcVj2taOhHP-rMWj6bT4/edit?usp=sharing
 describe('Visualizar histórico de transações com sucesso', () => {
   it('Deve exibir o histórico de transações de um usuário corretamente', () => {
-    //Implementei os casos de teste em uma planilha compartilhada nesse link: https://docs.google.com/spreadsheets/d/10Yf2ffHau3WyrDrc-VAHqrEwcVj2taOhHP-rMWj6bT4/edit?usp=sharing
     cy.visit('http://localhost:3000/signin')
     cy.get('[name="username"]').type('Qa-tester')                                                                         //Digita o nome do usuario
     cy.get('[name="password"]').type('ASDFGH12052026')                                                                    //Digita a senha
@@ -127,7 +123,6 @@ describe('Visualizar histórico de transações com sucesso', () => {
 
 describe('Tentar visualizar o histórico de transações sem transações anteriores', () => {
   it('Deve exibir uma mensagem indicando que o usuário não possui transações anteriores', () => {
-    //Implementei os casos de teste em uma planilha compartilhada nesse link: https://docs.google.com/spreadsheets/d/10Yf2ffHau3WyrDrc-VAHqrEwcVj2taOhHP-rMWj6bT4/edit?usp=sharing
     cy.visit('http://localhost:3000/signin')                                                                              //Acessa a pagina do projeto    
     cy.get('[name="username"]').type('Qa-tester')                                                                         //Digita o nome do usuario
     cy.get('[name="password"]').type('ASDFGH12052026')                                                                    //Digita a senha
