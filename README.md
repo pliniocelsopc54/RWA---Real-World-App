@@ -3,9 +3,13 @@ Este repositório apresenta uma suíte robusta de testes automatizados e garanti
 
 Tecnologias e Ferramentas Utilizadas
   • Automação E2E: Cypress / Playwright (ajuste conforme o framework que você usou)
+  
   • Testes de API: Postman / Cypress API testing
+
   • Gerenciamento de Testes e Bugs: Jira / GitHub Issues
+  
   • Controle de Versão & CI/CD: Git, GitHub Actions
+  
   • Boas Práticas: Uso de seletores resilientes (data-cy), Page Object Model (quando aplicável) e relatórios de execução.
 
 Escopo de Qualidade e Casos de Teste Cobertos
