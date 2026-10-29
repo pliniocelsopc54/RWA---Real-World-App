@@ -19,12 +19,16 @@ Escopo de Qualidade e Casos de Teste Cobertos
 A suíte de testes cobre os fluxos críticos de negócio da aplicação:
 
 
+
+
 1 - Autenticação e Gestão de Usuários:
   • Cadastro de novos usuários com validação de campos obrigatórios.
   
   • Login bem-sucedido e tratamento de credenciais inválidas.
   
   • Validação de sessão e controle de acesso (RBAC).
+
+
   
 
 2 - Transações Bancárias (Core Business):
@@ -33,6 +37,8 @@ A suíte de testes cobre os fluxos críticos de negócio da aplicação:
   • Validação de saldo em tempo real após transações.
   
   • Histórico de transações e filtros por data/valor.
+
+
   
 
 3 - Perfil e Configurações:
