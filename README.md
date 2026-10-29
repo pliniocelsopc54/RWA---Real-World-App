@@ -4,7 +4,7 @@ Real World App - Test Automation & Quality Assurance
 Este repositório apresenta uma suíte robusta de testes automatizados e garantia de qualidade (QA) implementada sobre a aplicação Real World App. O objetivo principal é demonstrar boas práticas de engenharia de qualidade, automação End-to-End (E2E), testes de API e rastreabilidade de defeitos.
 
 
-    Tecnologias e Ferramentas Utilizadas
+    Tecnologias e Ferramentas Utilizadas:
 
     • Automação E2E: Cypress / Playwright (ajuste conforme o framework que você usou)
   
